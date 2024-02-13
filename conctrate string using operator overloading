@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+class compile2
+{
+    public : 
+    string a;
+    void input()
+    {
+        cout<<"enter the value of a : ";
+        cin>>a;
+    }
+    void showdata()
+    {
+        cout<<"the value of a is : "<<a<<endl;
+    }
+    compile2 operator+(compile2 obj2)
+    {
+        compile2 obj3;
+        obj3.a = a + obj2.a;
+        return obj3;
+    }
+};
+
+int main()
+{
+    compile2 obj3;
+    compile2 obj1;
+    compile2 obj2;
+    obj1.input();
+    obj2.input();
+    obj3 = obj1  +  obj2;
+    obj3.showdata();
+}
