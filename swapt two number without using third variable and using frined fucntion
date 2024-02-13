@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class swap1
+{
+public:
+    int a, b;
+    void getdata()
+    {
+        cout << " enter a first number : ";
+        cin >> a;
+        cout << " enter a second number : ";
+        cin >> b;
+    }
+    void printdata()
+    {
+        cout << " the first number is : " << a << endl;
+        cout << " the second number is : " << b << endl;
+    }
+
+    void display()
+    {
+        cout <<   "a = " << a << "b = " << b << endl;
+    }
+    friend void swap_number(swap1 &obj);
+};
+void swap_number(swap1 &obj)
+{
+
+    obj.a = obj.a + obj.b;
+    obj.b = obj.a - obj.b;
+    obj.a = obj.a - obj.b;
+}
+int main()
+{
+    swap1 obj;
+    obj.getdata();
+    obj.printdata();
+    swap_number(obj);
+    obj.display();
+}
