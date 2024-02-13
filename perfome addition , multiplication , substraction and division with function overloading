@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class calculator
+{
+public:
+    void mathematic(int a, int b)
+    {
+        cout << "the both number sum is : " << a + b << endl;
+    }
+    void mathematic(double a, double b)
+    {
+        cout << "both number substracion is : " << a - b << endl;
+        // return a - b;
+    }
+    void mathematic(double a, int b)
+    {
+        // return a  *  b;
+        cout << "both number multiplication is : " << a * b << endl;
+    }
+    void mathematic(int a, double b)
+    {
+        cout << "the both number divison is :  " << a / b << endl;
+    }
+};
+int main()
+{
+    calculator obj;
+    obj.mathematic(10, 20);
+    obj.mathematic(10.00, 9.55);
+    obj.mathematic(10.00, 10);
+    obj.mathematic(10,2.00);
+}
