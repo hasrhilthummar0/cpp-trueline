@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class find_area
+{
+public:
+    void find_area1(int area, int breath)
+    {
+        cout << "the rectangle hegiht is : " << area << endl;
+        cout << "the rectangle width is : " << breath << endl;
+        cout << "the area of reactangle is : " << area * breath << endl;
+    }
+    void find_area1(double area1, double breath1)
+    {
+        cout << "the triangle area is : " << area1 << endl;
+        cout << "the trianlge breathe is : " << breath1 << endl;
+        cout << "the triangle area is : " << area1 * breath1 / 2 << endl;
+    }
+    void find_area1(int area)
+    {
+        double pi = 3.14;
+        cout << "circle area is : " << area << endl;
+        cout << "circle full area is : " << pi * area * area << endl;
+    }
+};
+int main()
+{
+    find_area obj;
+    obj.find_area1(10, 10);
+    obj.find_area1(10.00, 10.00);
+    obj.find_area1(10);
+}
